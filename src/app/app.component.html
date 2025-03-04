@@ -1,16 +1,26 @@
-
-
 <div>
-    <div style="text-align: center; font-size: 1.5rem" >
-            <h1>{{ title }}</h1>
-  <h3 >Let's get something Done!</h3>
-    </div>
+  <div style="text-align: center; font-size: 1.5rem">
+    <h1>{{ title }}</h1>
+    <h3>Let's get something Done!</h3>
+  </div>
 
-  <input [(ngModel)]="newTodo" style="padding: 0.5rem; margin-left: 2rem" placeholder="Add an item" />
+  <input
+    [(ngModel)]="newTodo"
+    style="padding: 0.5rem; margin-left: 2rem"
+    placeholder="Add an item"
+    (keyup.enter)="addTodo()"
+  />
 </div>
 
-<button (click)="addTodo()"   style="margin-left: 4rem; margin-top: 0.5rem">Click to add item</button>
+<button (click)="addTodo()" style="margin-left: 4rem; margin-top: 0.5rem">
+  Click to add item
+</button>
 
-<ul>
-
-</ul>
+<div style="height: 300px; background-color: aqua; margin: 7rem; border-radius: 20px; outline: 1px solid black;" >
+  <h3 style="text-align: center; padding: 1.5rem; font-size: 2rem;">List Items</h3>
+  <ul *ngFor="let item of todoItems">
+    <li style="font-size: 1.5rem">
+      {{ item }}
+    </li>
+  </ul>
+</div>
