@@ -1,12 +1,16 @@
 
 
 <div>
-  <h3 style="text-align: center; font-size: 2rem">Let's get something Done!</h3>
-  <input style="padding: 0.5rem; margin-left: 2rem" placeholder="Add an item" />
+    <div style="text-align: center; font-size: 1.5rem" >
+            <h1>{{ title }}</h1>
+  <h3 >Let's get something Done!</h3>
+    </div>
+
+  <input [(ngModel)]="newTodo" style="padding: 0.5rem; margin-left: 2rem" placeholder="Add an item" />
 </div>
 
-<button style="margin-left: 4rem; margin-top: 0.5rem">Click to add item</button>
+<button (click)="addTodo()"   style="margin-left: 4rem; margin-top: 0.5rem">Click to add item</button>
 
 <ul>
-    
+
 </ul>
