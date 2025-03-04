@@ -11,13 +11,10 @@ export class AppComponent {
   todoItems: string[] = [];
   newTodo: string = ''; //info from our client
 
-
   addTodo() {
-    console.log(this.newTodo);
-
     if (this.newTodo) {
       this.todoItems.push(this.newTodo);
     }
-     this.newTodo = '';
+    this.newTodo = '';
   }
 }

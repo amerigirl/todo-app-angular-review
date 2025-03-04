@@ -16,8 +16,18 @@
   Click to add item
 </button>
 
-<div style="height: 300px; background-color: aqua; margin: 7rem; border-radius: 20px; outline: 1px solid black;" >
-  <h3 style="text-align: center; padding: 1.5rem; font-size: 2rem;">List Items</h3>
+<div
+  style="
+    height: 300px;
+    background-color: aqua;
+    margin: 7rem;
+    border-radius: 20px;
+    outline: 1px solid black;
+  "
+>
+  <h3 style="text-align: center; padding: 1.5rem; font-size: 2rem">
+    List Items
+  </h3>
   <ul *ngFor="let item of todoItems">
     <li style="font-size: 1.5rem">
       {{ item }}
